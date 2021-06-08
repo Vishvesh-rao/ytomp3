@@ -74,7 +74,7 @@ def inlinequery(update, context):
 @tl.job(interval=timedelta(seconds=4))                  #------------ Checks current time to send update alerts at specified hour
 def Check_Time_every_4s():
     try:
-        resp = requests.post("https://api.telegram.org/bot1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U/getUpdates")
+        resp = requests.post("https://api.telegram.org/bot{token}/getUpdates")
         print(resp.json()['result'][-1]['message']['text'])
     except:
         print("blah")  
@@ -82,7 +82,7 @@ def Check_Time_every_4s():
 def main():
 
 
-    updater = Updater("1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U", use_context=True)
+    updater = Updater("token", use_context=True)
 
     dp = updater.dispatcher
 

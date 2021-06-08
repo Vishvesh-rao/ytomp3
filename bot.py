@@ -12,25 +12,14 @@ from datetime import *
 
 
 
-# # Enable logging
-# logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-#                     level=logging.INFO)
-
-# logger = logging.getLogger(__name__)
-
 
 tl = Timeloop()
 
-#Command handlers
-#Sends message when /start is used
+
 def start(update, context):
     update.message.reply_text('Hello!')
 
-#Sends message when /search is used
-def help(update, context):
-    update.message.reply_text('Help!')
 
-#Sends message when @botname is used
 def inlinequery(update, context):
     """Handle the inline query."""
     query = update.inline_query.query
@@ -82,15 +71,6 @@ def inlinequery(update, context):
     update.inline_query.answer(videos)
     
 
-
-
-
-# def error(update, context):
-#     """Log Errors caused by Updates."""
-#     logger.warning('Update "%s" caused error "%s"', update, context.error)
-
-
-
 @tl.job(interval=timedelta(seconds=4))                  #------------ Checks current time to send update alerts at specified hour
 def Check_Time_every_4s():
     try:
@@ -100,36 +80,24 @@ def Check_Time_every_4s():
         print("blah")  
 
 def main():
-    # Create the Updater and pass it your bot's token.
-    # Make sure to set use_context=True to use the new context based callbacks
 
 
     updater = Updater("1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U", use_context=True)
 
-    # Get the dispatcher to register handlers
     dp = updater.dispatcher
 
-    # on different commands - answer in Telegram
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("help", help))
 
-    # # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(InlineQueryHandler(inlinequery))
 
     updater.start_polling()
 
     tl.start(block=True)
 
-    # Block until the user presses Ctrl-C or the process receives SIGINT,
-    # SIGTERM or SIGABRT. This should be used most of the time, since
-    # start_polling() is non-blocking and will stop the bot gracefully.
     updater.idle()
 
 
-    # # log all errors
-    # dp.add_error_handler(error)
-
-    # Start the Bot
 
 
 if __name__ == '__main__':

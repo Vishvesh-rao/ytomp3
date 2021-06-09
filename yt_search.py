@@ -9,12 +9,13 @@ class youtubeSearch():
     def __init__(self):
         self.api_service_name = "youtube"
         self.api_version = "v3"
-        self.credentials = ""
+        self.credentials = "AIzaSyAnU_gusO_06VEn-0b6PHHKJei5m5VKznQ"
         self.message = ""
         self.description = ""
         self.results = []
 
 
+    #method for starting a youtube search
     def main(self, query):
 
         # Get credentials and create an API client
@@ -28,14 +29,18 @@ class youtubeSearch():
             type="video"
         ).execute()
 
+        # extracting the results from search response 
         self.results = request.get("items", []) 
+        # empty list to store video
         videos = []
         
+        # extracting required info from each result object 
         for result in self.results: 
+            # video result object 
             info = []
             videos.append([
                 result["id"]["videoId"], 
-                result["snippet"]["title"], 
+                    result["snippet"]["title"], 
                 result['snippet']['description'], 
                 result['snippet']['thumbnails']['default']['url'],
                 result['snippet']['channelTitle']])

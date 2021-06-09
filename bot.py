@@ -98,7 +98,7 @@ def inlinequery(update, context):
 def main():
 
     print("start")
-    updater = Updater("1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U", use_context=True)
+    updater = Updater("{bot-token}", use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher

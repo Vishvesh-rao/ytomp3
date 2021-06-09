@@ -53,6 +53,8 @@ def button(update ,context) -> None:
 
     query.answer()
 
+    query.edit_message_text("please wait while converting.......")
+
     print(SongName)
     print(videoId)
 

@@ -28,7 +28,7 @@ def mp3downloader(fname,vid_id):
 
         with open('{filename}.mp4'.format(filename = filename), 'rb') as audio:
             payload = {
-                'chat_id': 972187028,
+                'chat_id': ,
                 'title': '{filename}.mp3'.format(filename=filename),
                 'parse_mode': 'HTML'
             }

@@ -1,3 +1,14 @@
 # ytomp3
 
 Simple video search bot for telegram that lets the user search for videos on youtube via inline command 
+
+## Usage
+- you will need to get your API keys for youtube from [here](https://developers.google.com/docs/api/quickstart/python) 
+
+- type @botname in message field and type the song name
+- you will see a list of songs appear choose one from that
+- press the `convert to mp3` button which appears after that
+- Wait for it to convert
+- Song will be downloaded
+
+

@@ -7,7 +7,7 @@ Simple video search bot for telegram that lets the user search for videos on you
 
 - type @botname in message field and type the song name
 - you will see a list of songs appear choose one from that
-- press the `convert to mp3` button which appears after that
+- press the `convert to mp3` button which appear after that
 - Wait for it to convert
 - Song will be downloaded
 

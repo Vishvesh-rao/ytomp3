@@ -30,7 +30,7 @@ def mp3downloader(fname,vid_id):
                 'audio': audio.read(),
             }
     
-            resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U'),
+            resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='bot-token'),
                                 data=payload,
                                 files=files).json()
 

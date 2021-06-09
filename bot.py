@@ -113,29 +113,7 @@ def main():
 
     updater.start_polling()
 
- 
     updater.idle()
-
-
-    # # log all errors
-    # dp.add_error_handler(error)
-
-    # Start the Bot
-
-# def error(update, context):
-#     """Log Errors caused by Updates."""
-#     logger.warning('Update "%s" caused error "%s"', update, context.error)
-
-
-
-# @tl.job(interval=timedelta(seconds=4))                  #------------ Checks current time to send update alerts at specified hour
-# def Check_Time_every_4s():
-#     try:
-#         resp = requests.post("https://api.telegram.org/bot1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U/getUpdates")
-#         print(resp.json()['result'][-1]['message']['text'])
-#     except:
-#         print("blah")  
-
 
 if __name__ == '__main__':
     main()

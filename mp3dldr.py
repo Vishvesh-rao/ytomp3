@@ -21,7 +21,7 @@ def mp3downloader(fname,vid_id):
 
         with open('file.mp3', 'rb') as audio:
             payload = {
-                'chat_id': 972187028,
+                'chat_id': "{input your chat id here}",                          ##----> input chatid
                 'title': '{filename}.mp3'.format(filename=filename),
                 'parse_mode': 'HTML'
             }
@@ -29,7 +29,7 @@ def mp3downloader(fname,vid_id):
                 'audio': audio.read(),
             }
     
-            resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='bot-token'),
+            resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='bot-token'),   ##-----> input bot token
                                 data=payload,
                                 files=files).json()
 

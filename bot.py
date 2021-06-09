@@ -100,7 +100,7 @@ def inlinequery(update, context):
 def main():
 
     print("start")
-    updater = Updater("{bot-token}", use_context=True)
+    updater = Updater("{bot-token}", use_context=True)         ##--------> input bot token
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher

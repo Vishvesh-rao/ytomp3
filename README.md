@@ -12,8 +12,11 @@ Simple video search bot for telegram that lets the user search for videos on you
 - Put chat ID in mp3dldr.py
 - type `@botusername` in message field and type the song name
 - you will see a list of songs appears choose one from that
-- press the `convert to mp3` button which appear after that
+- press the `convert to mp3` button which appears after that
 - Wait for it to convert
 - Song will be downloaded
+
+
+> PS: This bot is made purely for educational purposes and getting an understanding of the bot api. Certain songs are not meant to be downloaded do check TOS of youtube. 
 
 

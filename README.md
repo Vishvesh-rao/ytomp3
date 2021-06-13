@@ -1,6 +1,6 @@
 # ytomp3
 
-Simple video search bot for telegram that lets the user search for videos on youtube via inline command. Now you can take full advantage of telegrams unlimited free storage and built in mp3 player without having to worry about backing up your songs or loosing them!!
+Simple video search bot for telegram that lets the user search for videos on youtube via inline command. Now you can take full advantage of telegrams unlimited free storage and built in mp3 player without having to worry about backing up your songs or loosing them!! Now with added support for mp4 format too !!
 
 ## Usage
 - Clone the repo
@@ -10,11 +10,11 @@ Simple video search bot for telegram that lets the user search for videos on you
 - Put the API creds in yt_search.py
 - Get your chatid from this [bot](https://telegram.me/get_id_bot)
 - Put chat ID in mp3dldr.py
-- type `@botusername` in message field and type the song name
-- you will see a list of songs appears choose one from that
-- press the `convert to mp3` button which appears after that
+- type `@botusername` in message field and type the video name
+- Wait till the video appears and click on it
+- press the `convert to mp3`/`convert to mp4`/`canel`  button which appears after that
 - Wait for it to convert
-- Song will be downloaded
+- video will be downloaded
 
 
 > PS: This bot is made purely for educational purposes and getting an understanding of the bot api. Certain songs are not meant to be downloaded do check TOS of youtube. 

@@ -62,7 +62,6 @@ def button(update ,context) -> None:
 
     query.answer()
 
-<<<<<<< HEAD
     type_ = query.data
 
     if query.data == 'cancelled':
@@ -75,12 +74,6 @@ def button(update ,context) -> None:
 
         if query.data == 'mp3':
             mp3downloader(SongName,videoId)
-=======
-    query.edit_message_text("please wait while converting.......")
-
-    print(SongName)
-    print(videoId)
->>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3
 
         if query.data == 'mp4':
             mp4downloader(SongName,videoId)
@@ -125,11 +118,7 @@ def inlinequery(update, context):
 def main():
 
     print("start")
-<<<<<<< HEAD
     updater = Updater("{bot-token}", use_context=True)                  ## INPUT BOT TOKEN HERE
-=======
-    updater = Updater("{bot-token}", use_context=True)         ##--------> input bot token
->>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -142,32 +131,10 @@ def main():
 
     updater.start_polling()
 
+ 
     updater.idle()
 
-<<<<<<< HEAD
 
 if __name__ == '__main__':
     main()
 
-    # # log all errors
-    # dp.add_error_handler(error)
-
-    # Start the Bot
-
-# def error(update, context):
-#     """Log Errors caused by Updates."""
-#     logger.warning('Update "%s" caused error "%s"', update, context.error)
-
-
-
-# @tl.job(interval=timedelta(seconds=4))                  #------------ Checks current time to send update alerts at specified hour
-# def Check_Time_every_4s():
-#     try:
-#         resp = requests.post("https://api.telegram.org/bot1560738081:AAHqhhboT5oTCCO6uHhjbu8eIk42vxkqK0U/getUpdates")
-#         print(resp.json()['result'][-1]['message']['text'])
-#     except:
-#         print("blah")  
-=======
-if __name__ == '__main__':
-    main()
->>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3

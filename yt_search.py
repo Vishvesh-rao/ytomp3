@@ -8,11 +8,7 @@ class youtubeSearch():
     def __init__(self):
         self.api_service_name = "youtube"
         self.api_version = "v3"
-<<<<<<< HEAD
         self.credentials = "API CREDS"    ## INPUT YOUR API CRED HERE
-=======
-        self.credentials = "API CREDS"
->>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3
         self.message = ""
         self.description = ""
         self.results = []

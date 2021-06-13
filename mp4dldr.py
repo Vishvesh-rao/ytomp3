@@ -26,7 +26,7 @@ def mp4downloader(fname,vid_id):
                 'video': video.read(),
             }
     
-            resp = requests.post("https://api.telegram.org/bot{token}/sendVideo".format(token='{bot-token}'),            ## input bot token here
+            resp = requests.post("https://api.telegram.org/bot{token}/sendVideo".format(token='{bot-token}'),
                                 data=payload,
                                 files=files).json()
 

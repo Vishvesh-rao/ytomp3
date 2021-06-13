@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 from pytube import YouTube
 import requests
-import time
 import sys
 import os
 
@@ -29,7 +28,11 @@ def mp3downloader(fname,vid_id):
                 'audio': audio.read(),
             }
     
+<<<<<<< HEAD
+            resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='{bot-token}'),               ## INPUT BOT TOKEN HERE
+=======
             resp = requests.post("https://api.telegram.org/bot{token}/sendAudio".format(token='bot-token'),   ##-----> input bot token
+>>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3
                                 data=payload,
                                 files=files).json()
 
@@ -40,6 +43,7 @@ def mp3downloader(fname,vid_id):
 
     except exception as e:
         print(e)
+        os.system("rm *.mp4")
 
         return "OOPS failed to convert!!!"
 

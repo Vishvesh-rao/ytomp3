@@ -1,7 +1,6 @@
+from googleapiclient.discovery import build
 import requests
 import json
-import configparser as cfg
-from googleapiclient.discovery import build
 
 
 class youtubeSearch():
@@ -9,7 +8,11 @@ class youtubeSearch():
     def __init__(self):
         self.api_service_name = "youtube"
         self.api_version = "v3"
+<<<<<<< HEAD
+        self.credentials = "API CREDS"    ## INPUT YOUR API CRED HERE
+=======
         self.credentials = "API CREDS"
+>>>>>>> 5c4d4c9daf144ca846b79e118d6627fc1e0b23f3
         self.message = ""
         self.description = ""
         self.results = []
@@ -23,7 +26,7 @@ class youtubeSearch():
 
         request = youtube.search().list(
             part="snippet",
-            maxResults=10,
+            maxResults=1,
             order="relevance",
             q = query,
             type="video"

@@ -9,10 +9,10 @@ Simple video search bot for telegram that lets the user search for videos on you
 - you will need to get your API keys for youtube from [here](https://developers.google.com/docs/api/quickstart/python) 
 - Put the API creds in yt_search.py
 - Get your chatid from this [bot](https://telegram.me/get_id_bot)
-- Put chat ID in mp3dldr.py
+- Put chat ID in mp3dldr.py and mp4dldr.py
 - type `@botusername` in message field and type the video name
 - Wait till the video appears and click on it
-- press the `convert to mp3`/`convert to mp4`/`canel`  button which appears after that
+- press the `convert to mp3`/`convert to mp4` button which appears after that
 - Wait for it to convert
 - video will be downloaded
 

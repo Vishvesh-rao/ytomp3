@@ -18,7 +18,7 @@ def mp4downloader(fname,vid_id):
 
         with open('file.mp4', 'rb') as video:
             payload = {
-                'chat_id': 972187028,
+                'chat_id': chatid,   ## input chat id
                 'title': '{filename}.mp4'.format(filename=filename),
                 'parse_mode': 'HTML'
             }

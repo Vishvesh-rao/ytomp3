@@ -4,8 +4,9 @@ import requests
 import sys
 import os
 
-def mp4downloader(fname,vid_id):
+def mp4downloader(fname,vid_id,chatid):
     filename, video_id = fname,vid_id
+    chatid = chatid
     
     # creating YouTube object
     yt = YouTube("https://www.youtube.com/watch?v={id}".format(id = vid_id)) 
@@ -18,7 +19,7 @@ def mp4downloader(fname,vid_id):
 
         with open('file.mp4', 'rb') as video:
             payload = {
-                'chat_id': chatid,   ## input chat id
+                'chat_id': chatid,
                 'title': '{filename}.mp4'.format(filename=filename),
                 'parse_mode': 'HTML'
             }
@@ -26,7 +27,7 @@ def mp4downloader(fname,vid_id):
                 'video': video.read(),
             }
     
-            resp = requests.post("https://api.telegram.org/bot{token}/sendVideo".format(token='{bot-token}'),
+            resp = requests.post("https://api.telegram.org/bot{token}/sendVideo".format(token='{bot-token}'),   # input bot token
                                 data=payload,
                                 files=files).json()
 

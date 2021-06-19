@@ -11,6 +11,7 @@ import logging
 
 videoId = ''
 SongName = ''
+chatid = ''
 
 def initVars(vId,sName):
 
@@ -38,6 +39,8 @@ def help(update, context):
     update.message.reply_text('Help!')
 
 def convert(update, context):
+    
+    global chatid
 
     keyboard = [
     
@@ -55,11 +58,12 @@ def convert(update, context):
     content = "<b>Video Info</b>\n_____________________\n\n<b>VideoID-></b>   <code>" + videoId + "</code>\n\n<b>Video Name-></b>   <code>" + SongName + "</code>\n\n<i>Please choose</i>"
 
     update.message.reply_text(content,parse_mode='HTML',reply_markup=reply_markup)
+    
+    chatid = update.message.chat.id
 
 def button(update ,context) -> None:
 
     query = update.callback_query
-
     query.answer()
 
     type_ = query.data
@@ -73,10 +77,10 @@ def button(update ,context) -> None:
         query.edit_message_text("<b>Video Info</b>\n_____________________\n\n<b>VideoID-></b>   <code>" + videoId + "</code>\n\n<b>Video Name-></b>   <code>" + SongName + "</code>\n\n<b>Converting to-></b>   <code>" + type_ + "</code>\n\n<b><i>please wait while converting.......</i></b>",parse_mode='HTML')
 
         if query.data == 'mp3':
-            mp3downloader(SongName,videoId)
+            mp3downloader(SongName,videoId,chatid)
 
         if query.data == 'mp4':
-            mp4downloader(SongName,videoId)
+            mp4downloader(SongName,videoId,chatid)
 
         query.edit_message_text(text="<b>Video Info</b>\n_____________________ \n\n<b>VideoID-></b>   <code>" + videoId + "</code>\n\n<b>Video Name-></b>   <code>" + SongName + "</code>\n\n<b><i>Video Converted!!</i></b>",parse_mode='HTML')
 

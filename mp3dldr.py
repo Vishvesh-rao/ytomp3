@@ -20,7 +20,7 @@ def mp3downloader(fname,vid_id,,chatid):
 
         with open('file.mp3', 'rb') as audio:
             payload = {
-                'chat_id': chatid,   ## input chat id
+                'chat_id': chatid,   
                 'title': '{filename}.mp3'.format(filename=filename),
                 'parse_mode': 'HTML'
             }

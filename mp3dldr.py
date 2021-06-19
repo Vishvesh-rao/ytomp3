@@ -4,9 +4,9 @@ import requests
 import sys
 import os
 
-def mp3downloader(fname,vid_id):
+def mp3downloader(fname,vid_id,,chatid):
     filename, video_id = fname,vid_id
-        
+    chatid = chatid
 
     # creating YouTube object
     yt = YouTube("https://www.youtube.com/watch?v={id}".format(id = vid_id)) 

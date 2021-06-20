@@ -1,4 +1,4 @@
-# ytomp3
+# ytomp3 :musical_note:
 
 Simple video search bot for telegram that lets the user search for videos on youtube via inline command. Now you can take full advantage of telegrams unlimited free storage and built in mp3 player without having to worry about backing up your songs or loosing them!! Now with added support for mp4 format too !!
 
